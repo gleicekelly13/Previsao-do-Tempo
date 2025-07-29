@@ -6,8 +6,17 @@ import './App.css'
 function App() {
   
   return (
-    <div>
-        <h1>Previsão do Tempo</h1>
+    <div className='container'>
+      <h1>Previsão do Tempo</h1>
+
+      <main className='conteúdo-principal'>
+        <label>Cidade:
+          <input
+            type="text"
+            placeholder='Digite o nome da cidade'
+          />
+        </label>
+      </main>
     </div>
   )
 }
