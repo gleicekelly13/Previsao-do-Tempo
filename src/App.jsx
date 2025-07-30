@@ -4,7 +4,6 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  
   return (
     <div className='container'>
       <h1>Previsão do Tempo</h1>
@@ -16,6 +15,10 @@ function App() {
             placeholder='Digite o nome da cidade'
           />
         </label>
+
+        <button>
+          Pesquisar
+        </button>
       </main>
     </div>
   )
