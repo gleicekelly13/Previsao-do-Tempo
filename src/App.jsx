@@ -4,6 +4,11 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
+  
+  const buscarClima = () => {
+    alert("Você clicou no botão 'Pesquisar'")
+  }
+
   return (
     <div className='container'>
       <h1>Previsão do Tempo</h1>
@@ -16,7 +21,9 @@ function App() {
           />
         </label>
 
-        <button>
+        <button
+          onClick={buscarClima}
+        >
           Pesquisar
         </button>
       </main>
