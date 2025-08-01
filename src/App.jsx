@@ -4,9 +4,10 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
+  const [cidade, setCidade] = useState('');
   
   const buscarClima = () => {
-    alert("Você clicou no botão 'Pesquisar'")
+    alert(`Buscar o clima da cidade: ${cidade}`) /* A mensagem mostra o valor atual digitado no input */
   }
 
   return (
@@ -17,6 +18,8 @@ function App() {
         <label>Cidade:
           <input
             type="text"
+            value={cidade}  /* O valor que o input mostra deve vir do estado (cidade) */
+            onChange={(e) => setCidade(e.target.value)} /* Toda vez que o usuário digita algo, a função é chamada e atualiza cidade com o novo valor */
             placeholder='Digite o nome da cidade'
           />
         </label>
