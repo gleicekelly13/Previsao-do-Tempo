@@ -16,7 +16,7 @@ function App() {
       const resposta =await axios.get (`https://api.openweathermap.org/data/2.5/weather`, {
         params: {
           q: cidade,
-          appid: 'dda3d3516b312364b2fbac8ed9a15185',
+          appid: import.meta.env.VITE_API_KEY,
           units: 'metric',
           lang: 'pt-br'
         }
