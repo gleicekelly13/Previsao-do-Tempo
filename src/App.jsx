@@ -1,11 +1,33 @@
 import { useState } from 'react'
+import axios from 'axios';
 import './App.css'
 
 function App() {
   const [cidade, setCidade] = useState('');
+  const [clima, setClima] = useState(null);
   
-  const buscarClima = () => {
-    alert(`Buscar o clima da cidade: ${cidade}`) /* A mensagem mostra o valor atual digitado no input */
+  const buscarClima = async () => {
+    if (cidade.trim() === '') {
+      alert('Digite uma cidade!')
+      return
+    }
+
+    try {
+      const resposta =await axios.get (`https://api.openweathermap.org/data/2.5/weather`, {
+        params: {
+          q: cidade,
+          appid: 'dda3d3516b312364b2fbac8ed9a15185',
+          units: 'metric',
+          lang: 'pt-br'
+        }
+      })
+
+      setClima(resposta.data)
+    } catch (erro) {
+      alert('Cidade não encontrada!')
+      console.error(erro);
+    }
+
   }
 
   return (
