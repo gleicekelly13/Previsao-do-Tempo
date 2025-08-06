@@ -49,6 +49,15 @@ function App() {
         >
           Pesquisar
         </button>
+
+        {clima && (
+          <div>
+            <h2>{clima.name}</h2>
+            <p>{clima.weather[0].description}</p>
+            <p>Temperatura: {clima.main.temp}°C</p>
+            <p>Umidade: {clima.main.humidity}%</p>
+          </div>
+        )}
       </main>
     </div>
   )
