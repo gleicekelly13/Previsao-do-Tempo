@@ -30,7 +30,7 @@ function PrevisaoDoTempo () {
     }
     
       return (
-        <div className='container'>
+        <div>
           <h1>Previsão do Tempo</h1>
     
           <main className='conteúdo-principal'>
