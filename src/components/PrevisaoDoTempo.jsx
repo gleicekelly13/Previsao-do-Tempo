@@ -31,7 +31,7 @@ function PrevisaoDoTempo () {
     
       return (
         <div className='min-h-screen flex flex-col items-center justify-center gap-5'>
-          <h1>Previsão do Tempo</h1>
+          <h1 className='text-3xl font-semibold text-slate-800'>Previsão do Tempo</h1>
     
           <main className='conteúdo-principal'>
             <label>Cidade:
