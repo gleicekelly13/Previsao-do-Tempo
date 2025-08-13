@@ -33,8 +33,8 @@ function PrevisaoDoTempo () {
         <div className='min-h-screen flex flex-col items-center justify-center gap-5'>
           <h1 className='text-3xl font-semibold text-slate-800'>Previsão do Tempo</h1>
     
-          <main className='conteúdo-principal'>
-            <label>Cidade:
+          <main className='flex gap-6 items-center'>
+            <label className='flex gap-2'>Cidade:
               <input
                 type="text"
                 value={cidade}  /* O valor que o input mostra deve vir do estado (cidade) */
