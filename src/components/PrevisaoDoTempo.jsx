@@ -34,8 +34,9 @@ function PrevisaoDoTempo () {
           <h1 className='text-3xl font-semibold text-slate-800'>Previsão do Tempo</h1>
     
           <main className='flex gap-6 items-center'>
-            <label className='flex gap-2'>Cidade:
+            <label className='flex gap-2 items-center'>Cidade:
               <input
+                className='p-2 border-2 rounded-md border-gray-400 outline-none'
                 type="text"
                 value={cidade}  /* O valor que o input mostra deve vir do estado (cidade) */
                 onChange={(e) => setCidade(e.target.value)} /* Toda vez que o usuário digita algo, a função é chamada e atualiza cidade com o novo valor */
