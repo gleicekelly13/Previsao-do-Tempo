@@ -53,7 +53,7 @@ function PrevisaoDoTempo () {
     
             {clima && (
               <div className='mt-6 bg-sky-400 shadow-lg rounded-2xl p-6 w-80 text-center leading-10'>
-                <h2>{clima.name}</h2>
+                <h2 className='text-2xl font-bold text-slate-900'>{clima.name}</h2>
                 <p>{clima.weather[0].description}</p>
                 <p>Temperatura: {clima.main.temp}°C</p>
                 <p>Umidade: {clima.main.humidity}%</p>
