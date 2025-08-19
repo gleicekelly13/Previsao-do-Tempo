@@ -17,7 +17,7 @@ function PrevisaoDoTempo () {
               q: cidade,
               appid: import.meta.env.VITE_API_KEY,
               units: 'metric',
-              lang: 'pt-br'
+              lang: 'pt_br'
             }
         })
     
