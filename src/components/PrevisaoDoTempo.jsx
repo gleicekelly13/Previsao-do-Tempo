@@ -55,8 +55,12 @@ function PrevisaoDoTempo () {
               <div className='mt-6 bg-sky-400 shadow-lg rounded-2xl p-6 w-80 text-center leading-10'>
                 <h2 className='text-2xl font-bold text-slate-900'>{clima.name}</h2>
                 <p className='capitalize text-base font-medium text-slate-800 mt-2'>{clima.weather[0].description}</p>
-                <p>Temperatura: {clima.main.temp}°C</p>
-                <p>Umidade: {clima.main.humidity}%</p>
+                <p className='mt-4 text-base'>
+                  <span className='font-semibold text-slate-950'>Temperatura: {clima.main.temp}°C</span>
+                </p>
+                <p className='mt-2 font-lg'>
+                  <span className='font-semibold text-slate-950'>Umidade: {clima.main.humidity}%</span>
+                </p>
               </div>
             )}
           </main>
