@@ -1,5 +1,7 @@
-import { useState } from 'react'
+import { useState } from 'react';
 import axios from 'axios';
+import { Thermometer, Droplet } from 'lucide-react';
+
 
 function PrevisaoDoTempo () {
     const [cidade, setCidade] = useState('');
@@ -54,11 +56,16 @@ function PrevisaoDoTempo () {
             {clima && (
               <div className='mt-6 bg-sky-400 shadow-lg rounded-2xl p-6 w-80 text-center leading-10'>
                 <h2 className='text-2xl font-bold text-slate-900'>{clima.name}</h2>
+
                 <p className='capitalize text-base font-medium text-slate-800 mt-2'>{clima.weather[0].description}</p>
-                <p className='mt-4 text-base'>
+
+                <p className='flex items-center justify-center gap-1 mt-4 text-lg'>
+                  <Thermometer/>
                   <span className='font-semibold text-slate-950'>Temperatura: {clima.main.temp}°C</span>
                 </p>
-                <p className='mt-2 font-lg'>
+
+                <p className='flex items-center justify-center gap-1 mt-2 font-lg'>
+                  <Droplet/>
                   <span className='font-semibold text-slate-950'>Umidade: {clima.main.humidity}%</span>
                 </p>
               </div>
