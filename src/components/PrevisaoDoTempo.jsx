@@ -65,7 +65,7 @@ function PrevisaoDoTempo () {
                 </p>
 
                 <p className='flex items-center justify-center gap-1 mt-2 font-lg'>
-                  <Droplet/>
+                  <Droplet className='w-7 h-7 stroke-slate-900 fill-sky-500'/>
                   <span className='font-semibold text-slate-950'>Umidade: {clima.main.humidity}%</span>
                 </p>
               </div>
