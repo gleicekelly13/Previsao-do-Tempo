@@ -60,7 +60,7 @@ function PrevisaoDoTempo () {
                 <p className='capitalize text-base font-medium text-slate-800 mt-2'>{clima.weather[0].description}</p>
 
                 <p className='flex items-center justify-center gap-1 mt-4 text-lg'>
-                  <Thermometer/>
+                  <Thermometer className='w-7 h-7 stroke-slate-200 fill-red-700'/>
                   <span className='font-semibold text-slate-950'>Temperatura: {clima.main.temp}°C</span>
                 </p>
 
