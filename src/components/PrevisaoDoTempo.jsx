@@ -53,8 +53,26 @@ function PrevisaoDoTempo () {
               Pesquisar
             </button>
     
-            {clima && (
-              <div className='mt-6 bg-sky-400 shadow-lg rounded-2xl p-6 w-80 text-center leading-10'>
+            {clima && (() => {
+              let bgColor = "bg-slate-200";
+              const condicao = clima.weather[0].main;
+
+              if (condicao === "Clear") {
+                bgColor = "bg-blue-400";
+              } else if (condicao === "Clouds") {
+                bgColor = "bg-gray-400";
+              } else if (condicao === "Rain") {
+                bgColor = "bg-blue-700";
+              } else if (condicao === "Snow") {
+                bgColor = "bg-sky-200";
+              } else if (condicao === "Thunderstorm") {
+                bgColor = "bg-purple-600";
+              } else if (condicao === "Drizzle") {
+                bgColor = "bg-cyan-500";
+              }
+
+              return (
+              <div className={`mt-6 ${bgColor} shadow-lg rounded-2xl p-6 w-80 text-center leading-10`}>
                 <h2 className='text-2xl font-bold text-slate-900'>{clima.name}</h2>
 
                 <p className='capitalize text-base font-medium text-slate-800 mt-2'>{clima.weather[0].description}</p>
@@ -69,7 +87,9 @@ function PrevisaoDoTempo () {
                   <span className='font-semibold text-slate-950'>Umidade: {clima.main.humidity}%</span>
                 </p>
               </div>
-            )}
+            )  
+            })()}
+
           </main>
         </div>
     )
