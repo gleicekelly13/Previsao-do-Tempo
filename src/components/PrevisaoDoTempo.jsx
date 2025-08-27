@@ -54,21 +54,21 @@ function PrevisaoDoTempo () {
             </button>
     
             {clima && (() => {
-              let bgColor = "bg-slate-200";
-              const condicao = clima.weather[0].main;
+              let bgColor = "bg-slate-300";  // Padrão
+              const condicao = clima.weather[0].main;  //Pega a condição do clima em inglês
 
               if (condicao === "Clear") {
-                bgColor = "bg-blue-400";
+                bgColor = "bg-blue-400";  // Céu limpo
               } else if (condicao === "Clouds") {
-                bgColor = "bg-gray-400";
+                bgColor = "bg-gray-400";  // Nublado
               } else if (condicao === "Rain") {
-                bgColor = "bg-blue-700";
+                bgColor = "bg-blue-700";  // Chuva
               } else if (condicao === "Snow") {
-                bgColor = "bg-sky-200";
+                bgColor = "bg-sky-200";  //Neve
               } else if (condicao === "Thunderstorm") {
-                bgColor = "bg-purple-600";
+                bgColor = "bg-purple-600";  // Tempestade 
               } else if (condicao === "Drizzle") {
-                bgColor = "bg-cyan-500";
+                bgColor = "bg-cyan-500";  // Garoa
               }
 
               return (
