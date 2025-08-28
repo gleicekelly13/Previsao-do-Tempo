@@ -1,4 +1,6 @@
 <h1 align="center">Previsão do Tempo</h1>
+<h2 align="center">:page_facing_up: Descrição do projeto</h2>
+<p>Este é um projeto desenvolvido com React e Tailwind CSS, que consome a API do OpenWeather para exibir informações climáticas em tempo real de qualquer cidade pesquisada.</p>
 <br>
 
 # React + Vite
