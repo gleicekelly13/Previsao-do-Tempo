@@ -3,6 +3,13 @@
 <p>Este é um projeto desenvolvido com React e Tailwind CSS, que consome a API do OpenWeather para exibir informações climáticas em tempo real de qualquer cidade pesquisada.</p>
 <br>
 
+<h2 align="center"> :computer: Tecnologias utilizadas </h2>
+<ul>
+  <li>React</li>
+  <li>Vite</li>
+</ul>
+<br>
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
