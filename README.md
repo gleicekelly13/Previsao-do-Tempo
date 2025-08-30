@@ -7,6 +7,9 @@
 <ul>
   <li>React</li>
   <li>Vite</li>
+  <li>HTML5</li>
+  <li>Tailwind CSS</li>
+  <li>JavaScript</li>
 </ul>
 <br>
 
