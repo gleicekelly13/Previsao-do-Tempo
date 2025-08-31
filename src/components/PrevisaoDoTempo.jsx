@@ -33,6 +33,9 @@ function PrevisaoDoTempo () {
     
       return (
         <div className='min-h-screen flex flex-col items-center justify-center gap-7'>
+
+        <button className='ml-52'>Dark Mode</button>
+
           <h1 className='text-3xl font-semibold text-slate-800'>Previsão do Tempo</h1>
     
           <main className='flex flex-col gap-6 items-start'>
