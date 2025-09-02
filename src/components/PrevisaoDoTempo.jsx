@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import axios from 'axios';
 import { Thermometer, Droplet } from 'lucide-react';
+import  SunIcon  from "../assets/sun.png";
+import MoonIcon from "../assets/moon.png";
 
 
 function PrevisaoDoTempo () {
