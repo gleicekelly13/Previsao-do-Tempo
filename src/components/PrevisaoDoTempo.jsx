@@ -36,7 +36,7 @@ function PrevisaoDoTempo () {
       return (
         <div className='min-h-screen flex flex-col items-center justify-center gap-7'>
 
-        <button className='ml-52 flex bg-slate-300 px-4 py-2 rounded-lg'>
+        <button className='ml-52 flex bg-slate-300 px-4 py-2 rounded-lg hover:bg-slate-400 transition'>
           Dark
         </button>
 
