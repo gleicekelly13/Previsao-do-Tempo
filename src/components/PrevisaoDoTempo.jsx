@@ -8,6 +8,7 @@ import MoonIcon from "../assets/moon.png";
 function PrevisaoDoTempo () {
     const [cidade, setCidade] = useState('');
     const [clima, setClima] = useState(null);
+    const [temaEscuro, setTemaEscuro] = useState(false);
       
     const buscarClima = async () => {
         if (cidade.trim() === '') {
@@ -37,7 +38,14 @@ function PrevisaoDoTempo () {
         <div className='min-h-screen flex flex-col items-center justify-center gap-7'>
 
         <button className='ml-52 flex bg-slate-300 px-4 py-2 rounded-lg hover:bg-slate-400 transition'>
+
+        <img
+          src= {temaEscuro? SunIcon : MoonIcon}
+          className='w-5 h-5'
+        />
+
           Dark
+
         </button>
 
           <h1 className='text-3xl font-semibold text-slate-800'>Previsão do Tempo</h1>
