@@ -38,6 +38,7 @@ function PrevisaoDoTempo () {
         <div className='min-h-screen flex flex-col items-center justify-center gap-7'>
 
         <button 
+          onClick={() => setTemaEscuro(!temaEscuro)}
           className='ml-52 flex items-center gap-2 bg-slate-300 px-4 py-2 rounded-lg hover:bg-slate-400 transition'>
 
         <img
