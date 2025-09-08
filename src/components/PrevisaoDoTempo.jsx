@@ -46,7 +46,7 @@ function PrevisaoDoTempo () {
           className='w-5 h-5'
         />
 
-          Dark
+          <span>{temaEscuro? 'Light' : 'Dark'}</span>
 
         </button>
 
