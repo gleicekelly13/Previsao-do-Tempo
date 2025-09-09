@@ -65,7 +65,7 @@ function PrevisaoDoTempo () {
     
             <button
               onClick={buscarClima}
-              className='bg-slate-300 text-slate-950 p-2 rounded-md hover:bg-slate-500 transition hover:font-medium'
+              className='bg-slate-300 text-slate-950 p-2 rounded-md hover:bg-slate-400 transition hover:font-medium'
             >
               Pesquisar
             </button>
