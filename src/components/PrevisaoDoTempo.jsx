@@ -35,79 +35,81 @@ function PrevisaoDoTempo () {
     }
     
       return (
-        <div className='min-h-screen flex flex-col items-center justify-center gap-7'>
+        <div className= {temaEscuro ? 'dark' : ''}>
+          <div className='min-h-screen flex flex-col items-center justify-center gap-7'>
 
-        <button 
-          onClick={() => setTemaEscuro(!temaEscuro)}
-          className='ml-52 flex items-center gap-2 bg-slate-300 px-4 py-2 rounded-lg hover:bg-slate-400 transition'>
+          <button 
+            onClick={() => setTemaEscuro(!temaEscuro)}
+            className='ml-52 flex items-center gap-2 bg-slate-300 px-4 py-2 rounded-lg hover:bg-slate-400 transition'>
 
-        <img
-          src= {temaEscuro? SunIcon : MoonIcon}
-          className='w-5 h-5'
-        />
+          <img
+            src= {temaEscuro? SunIcon : MoonIcon}
+            className='w-5 h-5'
+          />
 
-          <span>{temaEscuro? 'Light' : 'Dark'}</span>
+            <span>{temaEscuro? 'Light' : 'Dark'}</span>
 
-        </button>
+          </button>
 
-          <h1 className='text-3xl font-semibold text-slate-800'>Previsão do Tempo</h1>
+            <h1 className='text-3xl font-semibold text-slate-800'>Previsão do Tempo</h1>
     
-          <main className='flex flex-col gap-6 items-start'>
-            <label className='flex gap-2 items-center font-medium'>Cidade:
-              <input
-                className='p-2 border-2 rounded-lg border-slate-200 outline-none'
-                type="text"
-                value={cidade}  /* O valor que o input mostra deve vir do estado (cidade) */
-                onChange={(e) => setCidade(e.target.value)} /* Toda vez que o usuário digita algo, a função é chamada e atualiza cidade com o novo valor */
-                placeholder='Digite o nome da cidade'
-              />
-            </label>
+            <main className='flex flex-col gap-6 items-start'>
+              <label className='flex gap-2 items-center font-medium'>Cidade:
+                <input
+                  className='p-2 border-2 rounded-lg border-slate-200 outline-none'
+                  type="text"
+                  value={cidade}  /* O valor que o input mostra deve vir do estado (cidade) */
+                  onChange={(e) => setCidade(e.target.value)} /* Toda vez que o usuário digita algo, a função é chamada e atualiza cidade com o novo valor */
+                  placeholder='Digite o nome da cidade'
+                />
+              </label>
     
-            <button
-              onClick={buscarClima}
-              className='bg-slate-300 text-slate-950 p-2 rounded-md hover:bg-slate-400 transition hover:font-medium'
-            >
-              Pesquisar
-            </button>
+              <button
+                onClick={buscarClima}
+                className='bg-slate-300 text-slate-950 p-2 rounded-md hover:bg-slate-400 transition hover:font-medium'
+              >
+                Pesquisar
+              </button>
     
-            {clima && (() => {
-              let bgColor = "bg-slate-300";  // Padrão
-              const condicao = clima.weather[0].main;  //Pega a condição do clima em inglês
+              {clima && (() => {
+                let bgColor = "bg-slate-300";  // Padrão
+                const condicao = clima.weather[0].main;  //Pega a condição do clima em inglês
 
-              if (condicao === "Clear") {
-                bgColor = "bg-blue-400";  // Céu limpo
-              } else if (condicao === "Clouds") {
-                bgColor = "bg-gray-400";  // Nublado
-              } else if (condicao === "Rain") {
-                bgColor = "bg-blue-700";  // Chuva
-              } else if (condicao === "Snow") {
-                bgColor = "bg-sky-200";  //Neve
-              } else if (condicao === "Thunderstorm") {
-                bgColor = "bg-purple-600";  // Tempestade 
-              } else if (condicao === "Drizzle") {
-                bgColor = "bg-cyan-500";  // Garoa
-              }
+                if (condicao === "Clear") {
+                  bgColor = "bg-blue-400";  // Céu limpo
+                } else if (condicao === "Clouds") {
+                  bgColor = "bg-gray-400";  // Nublado
+                } else if (condicao === "Rain") {
+                  bgColor = "bg-blue-700";  // Chuva
+                } else if (condicao === "Snow") {
+                  bgColor = "bg-sky-200";  //Neve
+                } else if (condicao === "Thunderstorm") {
+                  bgColor = "bg-purple-600";  // Tempestade 
+                } else if (condicao === "Drizzle") {
+                  bgColor = "bg-cyan-500";  // Garoa
+                }
 
-              return (
-              <div className={`mt-6 ${bgColor} shadow-lg rounded-2xl p-6 w-80 text-center leading-10`}>
-                <h2 className='text-2xl font-bold text-slate-900'>{clima.name}</h2>
+                return (
+                <div className={`mt-6 ${bgColor} shadow-lg rounded-2xl p-6 w-80 text-center leading-10`}>
+                  <h2 className='text-2xl font-bold text-slate-900'>{clima.name}</h2>
 
-                <p className='capitalize text-base font-medium text-slate-800 mt-2'>{clima.weather[0].description}</p>
+                  <p className='capitalize text-base font-medium text-slate-800 mt-2'>{clima.weather[0].description}</p>
 
-                <p className='flex items-center justify-center gap-1 mt-4 text-lg'>
-                  <Thermometer className='w-7 h-7 stroke-slate-200 fill-red-700'/>
-                  <span className='font-semibold text-slate-950'>Temperatura: {clima.main.temp}°C</span>
-                </p>
+                  <p className='flex items-center justify-center gap-1 mt-4 text-lg'>
+                    <Thermometer className='w-7 h-7 stroke-slate-200 fill-red-700'/>
+                    <span className='font-semibold text-slate-950'>Temperatura: {clima.main.temp}°C</span>
+                  </p>
 
-                <p className='flex items-center justify-center gap-1 mt-2 text-lg'>
-                  <Droplet className='w-7 h-7 stroke-slate-900 fill-sky-500'/>
-                  <span className='font-semibold text-slate-950'>Umidade: {clima.main.humidity}%</span>
-                </p>
-              </div>
-            )  
-            })()}
+                  <p className='flex items-center justify-center gap-1 mt-2 text-lg'>
+                    <Droplet className='w-7 h-7 stroke-slate-900 fill-sky-500'/>
+                    <span className='font-semibold text-slate-950'>Umidade: {clima.main.humidity}%</span>
+                  </p>
+                </div>
+              )  
+              })()}
 
-          </main>
+            </main>
+          </div>
         </div>
     )
 }

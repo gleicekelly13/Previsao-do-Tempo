@@ -15,3 +15,7 @@ body {
   text-align: center;
   font-family: 'Poppins', sans-serif;
 }
+
+.dark {
+  background-color: #363535;
+}
